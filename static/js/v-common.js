@@ -17,7 +17,7 @@ Vue.prototype.formatWord = function (val) {
     return val.replace(/\n/g, '<br>')
 };
 let ApiUrl = 'http://' + window.location.host + '/mobile';
-let RealApiUrl = 'http://' + window.location.host + '/api';
+let RealApiUrl = 'http://' + "mytool.xyz:8080" + '/api';
 let WapSiteUrl = 'http://' + window.location.host + '/wap';
 let WeiXinOauth = true;
 let share_config = {};
