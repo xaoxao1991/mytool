@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title id="title">{{title}}</title>
+  <style>
+    [v-cloak]{
+      display: none !important;
+    }
+
+
+  </style>
+
+</head>
+<body>
+<div class="my-farm">
+  <div class="image-item">
+        <img :src="farm_info.image?farm_info.image:''" />
+  </div>
+</div>
+</body>
+<script src="../js/vue.js"></script>
+<script src="../js/v-common.js"></script>
+<script>
+  let farm_id=getQueryString("farm_id")
+  new Vue({
+    el: '#title',
+    data: function () {
+      return {
+        title:"XX农场欢迎您",
+      }
+    }
+  })
+  new Vue({
+    el: '.my-farm',
+    data: function () {
+      return {
+          farm_info:{
+
+          }
+      }
+    },
+    created(){
+     // this.get_farm_info()
+    },
+    methods: {
+      get_farm_info(){
+        let that=this
+        vFetch({
+          type:'admin',
+          method: "get",
+          url: "/admin/index.php?act=clz_apply&op=getApplyList",
+          data: {
+            farm_id:farm_id
+          },
+          success: function(result) {
+            that.farm_info=result
+          },
+        })
+      },
+    },
+  })
+
+
+</script>
+
+
+
+
+
+</html>
