@@ -1,4 +1,4 @@
-import store from 'admin/store'
+import store from 'adminWeb/store'
 
 const { body } = document
 const WIDTH = 1024

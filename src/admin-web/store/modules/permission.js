@@ -1,4 +1,4 @@
-import { asyncRouterMap, constantRouterMap } from 'admin/router/index';
+import { asyncRouterMap, constantRouterMap } from 'adminWeb/router/index';
 
 //判断是否有权限访问该菜单
 function hasPermission(menus, route) {

@@ -181,7 +181,7 @@
 <script>
   import {fetchList,closeOrder,deleteOrder} from '@/api/order'
   import {formatDate} from '@/utils/date';
-  import LogisticsDialog from 'admin/oms/order/components/logisticsDialog';
+  import LogisticsDialog from 'adminWeb/oms/order/components/logisticsDialog';
   const defaultListQuery = {
     pageNum: 1,
     pageSize: 10,

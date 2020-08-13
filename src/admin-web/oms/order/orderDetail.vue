@@ -348,7 +348,7 @@
 </template>
 <script>
   import {getOrderDetail,updateReceiverInfo,updateMoneyInfo,closeOrder,updateOrderNote,deleteOrder} from '@/api/order';
-  import LogisticsDialog from 'admin/oms/order/components/logisticsDialog';
+  import LogisticsDialog from 'adminWeb/oms/order/components/logisticsDialog';
   import {formatDate} from '@/utils/date';
   import VDistpicker from 'v-distpicker';
   const defaultReceiverInfo = {

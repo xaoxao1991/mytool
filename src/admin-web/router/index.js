@@ -6,7 +6,7 @@ const Router=require("vue-router")
 // Vue.use(Router)
 
 /* Layout */
-import Layout from 'admin/layout/Layout'
+import Layout from 'adminWeb/layout/Layout'
 
 /**
  * hidden: true                   if `hidden:true` will not show in the sidebar(default is false)
@@ -21,8 +21,8 @@ import Layout from 'admin/layout/Layout'
   }
  **/
 export const constantRouterMap = [
-  {path: '/login', component: () => import('admin/login/index'), hidden: true},
-  {path: '/404', component: () => import('admin/404'), hidden: true},
+  {path: '/login', component: () => import('adminWeb/login/index'), hidden: true},
+  {path: '/404', component: () => import('adminWeb/404'), hidden: true},
   {
     path: '',
     component: Layout,
@@ -30,7 +30,7 @@ export const constantRouterMap = [
     children: [{
       path: 'home',
       name: 'home',
-      component: () => import('admin/home/index'),
+      component: () => import('adminWeb/home/index'),
       meta: {title: '首页', icon: 'home'}
     }]
   }
@@ -43,89 +43,90 @@ export const asyncRouterMap = [
     redirect: '/pms/product',
     name: 'pms',
     meta: {title: '商品', icon: 'product'},
-    children: [{
+    children: [
+      {
       path: 'product',
       name: 'product',
-      component: () => import('admin/pms/product/index'),
+      component: () => import('adminWeb/pms/product/index'),
       meta: {title: '商品列表', icon: 'product-list'}
     },
       {
         path: 'addProduct',
         name: 'addProduct',
-        component: () => import('admin/pms/product/add'),
+        component: () => import('adminWeb/pms/product/add'),
         meta: {title: '添加商品', icon: 'product-add'}
       },
       {
         path: 'updateProduct',
         name: 'updateProduct',
-        component: () => import('admin/pms/product/update'),
+        component: () => import('adminWeb/pms/product/update'),
         meta: {title: '修改商品', icon: 'product-add'},
         hidden: true
       },
       {
         path: 'productCate',
         name: 'productCate',
-        component: () => import('admin/pms/productCate/index'),
+        component: () => import('adminWeb/pms/productCate/index'),
         meta: {title: '商品分类', icon: 'product-cate'}
       },
       {
         path: 'addProductCate',
         name: 'addProductCate',
-        component: () => import('admin/pms/productCate/add'),
+        component: () => import('adminWeb/pms/productCate/add'),
         meta: {title: '添加商品分类'},
         hidden: true
       },
       {
         path: 'updateProductCate',
         name: 'updateProductCate',
-        component: () => import('admin/pms/productCate/update'),
+        component: () => import('adminWeb/pms/productCate/update'),
         meta: {title: '修改商品分类'},
         hidden: true
       },
       {
         path: 'productAttr',
         name: 'productAttr',
-        component: () => import('admin/pms/productAttr/index'),
+        component: () => import('adminWeb/pms/productAttr/index'),
         meta: {title: '商品类型', icon: 'product-attr'}
       },
       {
         path: 'productAttrList',
         name: 'productAttrList',
-        component: () => import('admin/pms/productAttr/productAttrList'),
+        component: () => import('adminWeb/pms/productAttr/productAttrList'),
         meta: {title: '商品属性列表'},
         hidden: true
       },
       {
         path: 'addProductAttr',
         name: 'addProductAttr',
-        component: () => import('admin/pms/productAttr/addProductAttr'),
+        component: () => import('adminWeb/pms/productAttr/addProductAttr'),
         meta: {title: '添加商品属性'},
         hidden: true
       },
       {
         path: 'updateProductAttr',
         name: 'updateProductAttr',
-        component: () => import('admin/pms/productAttr/updateProductAttr'),
+        component: () => import('adminWeb/pms/productAttr/updateProductAttr'),
         meta: {title: '修改商品属性'},
         hidden: true
       },
       {
         path: 'brand',
         name: 'brand',
-        component: () => import('admin/pms/brand/index'),
+        component: () => import('adminWeb/pms/brand/index'),
         meta: {title: '品牌管理', icon: 'product-brand'}
       },
       {
         path: 'addBrand',
         name: 'addBrand',
-        component: () => import('admin/pms/brand/add'),
+        component: () => import('adminWeb/pms/brand/add'),
         meta: {title: '添加品牌'},
         hidden: true
       },
       {
         path: 'updateBrand',
         name: 'updateBrand',
-        component: () => import('admin/pms/brand/update'),
+        component: () => import('adminWeb/pms/brand/update'),
         meta: {title: '编辑品牌'},
         hidden: true
       }
@@ -141,45 +142,45 @@ export const asyncRouterMap = [
       {
         path: 'order',
         name: 'order',
-        component: () => import('admin/oms/order/index'),
+        component: () => import('adminWeb/oms/order/index'),
         meta: {title: '订单列表', icon: 'product-list'}
       },
       {
         path: 'orderDetail',
         name: 'orderDetail',
-        component: () => import('admin/oms/order/orderDetail'),
+        component: () => import('adminWeb/oms/order/orderDetail'),
         meta: {title: '订单详情'},
         hidden:true
       },
       {
         path: 'deliverOrderList',
         name: 'deliverOrderList',
-        component: () => import('admin/oms/order/deliverOrderList'),
+        component: () => import('adminWeb/oms/order/deliverOrderList'),
         meta: {title: '发货列表'},
         hidden:true
       },
       {
         path: 'orderSetting',
         name: 'orderSetting',
-        component: () => import('admin/oms/order/setting'),
+        component: () => import('adminWeb/oms/order/setting'),
         meta: {title: '订单设置', icon: 'order-setting'}
       },
       {
         path: 'returnApply',
         name: 'returnApply',
-        component: () => import('admin/oms/apply/index'),
+        component: () => import('adminWeb/oms/apply/index'),
         meta: {title: '退货申请处理', icon: 'order-return'}
       },
       {
         path: 'returnReason',
         name: 'returnReason',
-        component: () => import('admin/oms/apply/reason'),
+        component: () => import('adminWeb/oms/apply/reason'),
         meta: {title: '退货原因设置', icon: 'order-return-reason'}
       },
       {
         path: 'returnApplyDetail',
         name: 'returnApplyDetail',
-        component: () => import('admin/oms/apply/applyDetail'),
+        component: () => import('adminWeb/oms/apply/applyDetail'),
         meta: {title: '退货原因详情'},
         hidden:true
       }
@@ -195,98 +196,98 @@ export const asyncRouterMap = [
       {
         path: 'flash',
         name: 'flash',
-        component: () => import('admin/sms/flash/index'),
+        component: () => import('adminWeb/sms/flash/index'),
         meta: {title: '秒杀活动列表', icon: 'sms-flash'}
       },
       {
         path: 'flashSession',
         name: 'flashSession',
-        component: () => import('admin/sms/flash/sessionList'),
+        component: () => import('adminWeb/sms/flash/sessionList'),
         meta: {title: '秒杀时间段列表'},
         hidden:true
       },
       {
         path: 'selectSession',
         name: 'selectSession',
-        component: () => import('admin/sms/flash/selectSessionList'),
+        component: () => import('adminWeb/sms/flash/selectSessionList'),
         meta: {title: '秒杀时间段选择'},
         hidden:true
       },
       {
         path: 'flashProductRelation',
         name: 'flashProductRelation',
-        component: () => import('admin/sms/flash/productRelationList'),
+        component: () => import('adminWeb/sms/flash/productRelationList'),
         meta: {title: '秒杀商品列表'},
         hidden:true
       },
       {
         path: 'coupon',
         name: 'coupon',
-        component: () => import('admin/sms/coupon/index'),
+        component: () => import('adminWeb/sms/coupon/index'),
         meta: {title: '优惠券列表', icon: 'sms-coupon'}
       },
       {
         path: 'addCoupon',
         name: 'addCoupon',
-        component: () => import('admin/sms/coupon/add'),
+        component: () => import('adminWeb/sms/coupon/add'),
         meta: {title: '添加优惠券'},
         hidden:true
       },
       {
         path: 'updateCoupon',
         name: 'updateCoupon',
-        component: () => import('admin/sms/coupon/update'),
+        component: () => import('adminWeb/sms/coupon/update'),
         meta: {title: '修改优惠券'},
         hidden:true
       },
       {
         path: 'couponHistory',
         name: 'couponHistory',
-        component: () => import('admin/sms/coupon/history'),
+        component: () => import('adminWeb/sms/coupon/history'),
         meta: {title: '优惠券领取详情'},
         hidden:true
       },
       {
         path: 'brand',
         name: 'homeBrand',
-        component: () => import('admin/sms/brand/index'),
+        component: () => import('adminWeb/sms/brand/index'),
         meta: {title: '品牌推荐', icon: 'product-brand'}
       },
       {
         path: 'new',
         name: 'homeNew',
-        component: () => import('admin/sms/new/index'),
+        component: () => import('adminWeb/sms/new/index'),
         meta: {title: '新品推荐', icon: 'sms-new'}
       },
       {
         path: 'hot',
         name: 'homeHot',
-        component: () => import('admin/sms/hot/index'),
+        component: () => import('adminWeb/sms/hot/index'),
         meta: {title: '人气推荐', icon: 'sms-hot'}
       },
       {
         path: 'subject',
         name: 'homeSubject',
-        component: () => import('admin/sms/subject/index'),
+        component: () => import('adminWeb/sms/subject/index'),
         meta: {title: '专题推荐', icon: 'sms-subject'}
       },
       {
         path: 'advertise',
         name: 'homeAdvertise',
-        component: () => import('admin/sms/advertise/index'),
+        component: () => import('adminWeb/sms/advertise/index'),
         meta: {title: '广告列表', icon: 'sms-ad'}
       },
       {
         path: 'addAdvertise',
         name: 'addHomeAdvertise',
-        component: () => import('admin/sms/advertise/add'),
+        component: () => import('adminWeb/sms/advertise/add'),
         meta: {title: '添加广告'},
         hidden:true
       },
       {
         path: 'updateAdvertise',
         name: 'updateHomeAdvertise',
-        component: () => import('admin/sms/advertise/update'),
+        component: () => import('adminWeb/sms/advertise/update'),
         meta: {title: '编辑广告'},
         hidden:true
       }
@@ -302,59 +303,59 @@ export const asyncRouterMap = [
       {
         path: 'admin',
         name: 'admin',
-        component: () => import('admin/ums/admin/index'),
+        component: () => import('adminWeb/ums/admin/index'),
         meta: {title: '用户列表', icon: 'ums-admin'}
       },
       {
         path: 'role',
         name: 'role',
-        component: () => import('admin/ums/role/index'),
+        component: () => import('adminWeb/ums/role/index'),
         meta: {title: '角色列表', icon: 'ums-role'}
       },
       {
         path: 'allocMenu',
         name: 'allocMenu',
-        component: () => import('admin/ums/role/allocMenu'),
+        component: () => import('adminWeb/ums/role/allocMenu'),
         meta: {title: '分配菜单'},
         hidden: true
       },
       {
         path: 'allocResource',
         name: 'allocResource',
-        component: () => import('admin/ums/role/allocResource'),
+        component: () => import('adminWeb/ums/role/allocResource'),
         meta: {title: '分配资源'},
         hidden: true
       },
       {
         path: 'menu',
         name: 'menu',
-        component: () => import('admin/ums/menu/index'),
+        component: () => import('adminWeb/ums/menu/index'),
         meta: {title: '菜单列表', icon: 'ums-menu'}
       },
       {
         path: 'addMenu',
         name: 'addMenu',
-        component: () => import('admin/ums/menu/add'),
+        component: () => import('adminWeb/ums/menu/add'),
         meta: {title: '添加菜单'},
         hidden: true
       },
       {
         path: 'updateMenu',
         name: 'updateMenu',
-        component: () => import('admin/ums/menu/update'),
+        component: () => import('adminWeb/ums/menu/update'),
         meta: {title: '修改菜单'},
         hidden: true
       },
       {
         path: 'resource',
         name: 'resource',
-        component: () => import('admin/ums/resource/index'),
+        component: () => import('adminWeb/ums/resource/index'),
         meta: {title: '资源列表', icon: 'ums-resource'}
       },
       {
         path: 'resourceCategory',
         name: 'resourceCategory',
-        component: () => import('admin/ums/resource/categoryList'),
+        component: () => import('adminWeb/ums/resource/categoryList'),
         meta: {title: '资源分类'},
         hidden: true
       }
