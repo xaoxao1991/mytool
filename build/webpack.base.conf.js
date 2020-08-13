@@ -13,7 +13,6 @@ module.exports = {
   entry: {
     index: './src/user-web/index.js',
     admin: './src/admin-web/main.js',
-
   },
   externals: {
    'vue': 'Vue',

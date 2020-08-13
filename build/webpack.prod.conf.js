@@ -62,8 +62,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: config.build.admin,
-      template: 'index.html',
+      template: './src/admin-web/index.html',
       inject: true,
+      chunks: ['manifest', 'vendor', 'admin'],
+
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -71,16 +73,16 @@ const webpackConfig = merge(baseWebpackConfig, {
         // more options:
         // https://github.com/kangax/html-minifier#options-quick-reference
       },
+     // chunks: ['manifest', 'vendor', 'app'],
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency'
     }),
-
-
 
     new HtmlWebpackPlugin({
       filename: config.build.index,
-      template: 'index.html',
+      template: './src/user-web/index.html',
       inject: true,
+      chunks: ['manifest', 'vendor', 'index'],
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -91,8 +93,6 @@ const webpackConfig = merge(baseWebpackConfig, {
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency'
     }),
-
-
 
     // keep module.id stable when vendor modules does not change
     new webpack.HashedModuleIdsPlugin(),

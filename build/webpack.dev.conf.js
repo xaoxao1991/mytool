@@ -56,6 +56,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       filename: 'admin.html',
       template: './src/admin-web/index.html',
       inject: true,
+     // chunks: ['manifest', 'vendor', 'admin'],
       chunks:["admin"]
     }),
 
@@ -63,6 +64,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       filename: 'index.html',
       template: './src/user-web/index.html',
       inject: true,
+     // chunks: ['manifest', 'vendor', 'index'],
       chunks:["index"]
     }),
 
