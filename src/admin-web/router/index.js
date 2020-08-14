@@ -1,13 +1,10 @@
 // import Vue from 'vue'
 // import Router from 'vue-router'
-
 const Vue=require("vue")
 const Router=require("vue-router")
 // Vue.use(Router)
-
 /* Layout */
 import Layout from 'adminWeb/layout/Layout'
-
 /**
  * hidden: true                   if `hidden:true` will not show in the sidebar(default is false)
  * alwaysShow: true               if set true, will always show the root menu, whatever its child routes length
@@ -361,6 +358,29 @@ export const asyncRouterMap = [
       }
     ]
   },
+  {
+    path:'/config',
+    component: Layout,
+    redirect: '/config/category',
+    name: 'config',
+    meta: {title: '配置', icon: 'config'},
+    children: [
+      {
+        path: 'category',
+        name: 'category',
+        component: () => import('adminWeb/config/category'),
+        meta: {title: '分类配置', icon: 'category'}
+      }
+    ]
+  },
+
+
+
+
+
+
+
+
   {path: '*', redirect: '/404', hidden: true}
 ]
 
