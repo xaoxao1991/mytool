@@ -25,3 +25,26 @@
   height: 100%;
 }
 
+@mixin flex{
+  display: flex;
+  align-content: center;
+}
+
+@mixin x-auto-fill{
+  flex-grow: 8;
+}
+@mixin x-fill{
+  width: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+

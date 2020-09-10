@@ -11,7 +11,7 @@ body {
 	font-size: 12px;
 	color:#4d4d4d;
 	font-family: Helvetica Neue,Microsoft Yahei;
-	
+
 }
 body, .main, .container{
 	background:#f3f6f8;
@@ -89,7 +89,7 @@ body, .main, .container{
 			    z-index: 100000;
 			    margin-top: 10px;
 	    	}
-	    	
+
 	    }
 	}
 
@@ -105,7 +105,7 @@ body, .main, .container{
 		&::-webkit-scrollbar{
 			.set-scroll;
 		}
-		
+
 		li {
 			padding-left: 20px;
 			height: 32px;
@@ -226,7 +226,7 @@ body, .main, .container{
     background: #fff;
     box-shadow: 0 0 1rem rgba(0,0,0,.2);
     .copyright {
-	    margin-left: 30px; 
+	    margin-left: 30px;
 	    color: #949494;
 	    font-size: 12px;
 	    a {
@@ -245,7 +245,7 @@ body, .main, .container{
     position: sticky;
     top: 0;
     z-index: 2;
-    box-shadow: 1px 1px 8px #e0ddf;
+    box-shadow: 1px 1px 8px #e0ddff;
     height: 50px;
     #menu {
     	* {
@@ -310,7 +310,6 @@ body, .main, .container{
     right: 10px;
     bottom: 30px;
     z-index: 9999;
-    box-shadow: 0 0 20 #eee;
     box-shadow: 0 0 20px #ccc;
     cursor: pointer;
     display: none;
@@ -321,13 +320,12 @@ body, .main, .container{
 
 
 
-
 @media screen and (max-width: 481px) {
 	.container .box .item{
 	    width: 39%;
         min-width: 100px;
 	}
-	
+
 	.container .main {
 		margin-left: 0;
 	}

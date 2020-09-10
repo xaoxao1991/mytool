@@ -8,7 +8,7 @@ module.exports = {
   dev: {
     // Paths
     assetsSubDirectory: 'static',
-    //assetsPublicPath: '/user-web/',
+    //assetsPublicPath: '/mytool-web/',
     assetsPublicPath: '/',
     proxyTable: {},
 
@@ -40,6 +40,7 @@ module.exports = {
     // Template for index.html
     admin: path.resolve(__dirname, '../dist/admin.html'),
     index: path.resolve(__dirname, '../dist/index.html'),
+    jtnc: path.resolve(__dirname, '../dist/jtnc.html'),
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',

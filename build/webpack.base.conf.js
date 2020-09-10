@@ -11,7 +11,8 @@ function resolve (dir) {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    index: './src/user-web/index.js',
+    index: './src/mytool-web/index.js',
+    jtnc: './src/jtnc-web/index.js',
     admin: './src/admin-web/main.js',
   },
   externals: {
@@ -35,7 +36,8 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
       'adminWeb': resolve('src/admin-web'),
-      'userWeb': resolve('src/user-web'),
+      'mytoolWeb': resolve('src/mytool-web'),
+      'jtncWeb': resolve('src/jtnc-web'),
     }
   },
   module: {

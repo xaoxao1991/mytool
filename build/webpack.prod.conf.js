@@ -80,9 +80,25 @@ const webpackConfig = merge(baseWebpackConfig, {
 
     new HtmlWebpackPlugin({
       filename: config.build.index,
-      template: './src/user-web/index.html',
+      template: './src/mytool-web/index.html',
       inject: true,
       chunks: ['manifest', 'vendor', 'index'],
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: true
+        // more options:
+        // https://github.com/kangax/html-minifier#options-quick-reference
+      },
+      // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+      chunksSortMode: 'dependency'
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: config.build.jtnc,
+      template: './src/jtnc-web/index.html',
+      inject: true,
+      chunks: ['manifest', 'vendor', 'jtnc'],
       minify: {
         removeComments: true,
         collapseWhitespace: true,
