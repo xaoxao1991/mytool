@@ -96,7 +96,7 @@ const webpackConfig = merge(baseWebpackConfig, {
 
     new HtmlWebpackPlugin({
       filename: config.build.farm,
-      template: './src/farm-web/index.html',
+      template: './src/farm-wap/index.html',
       inject: true,
       chunks: ['manifest', 'vendor', 'farm'],
       minify: {

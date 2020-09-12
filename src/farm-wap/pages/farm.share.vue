@@ -1,23 +1,19 @@
 <template>
   <div >
-    <el-carousel trigger="click" height="150px" width="100%">
-      <el-carousel-item v-for="(item,index) in image_list" :key="index">
-        <el-image :src="item.url" fit="contain" style="width: 100%;height:300px;"></el-image>
-      </el-carousel-item>
-    </el-carousel>
     <div class="farm-name">
       <div>{{farm_info.farm_name}}</div>
       <div >{{farm_info.address}}</div>
     </div>
-
     <div class="farm-desc">
       <div>
         {{farm_info.description}}
       </div>
     </div>
+    <v-footer></v-footer>
   </div>
 </template>
 <script>
+   import footer from 'farmWap/pages/footer'
   export default {
     data() {
       return {
@@ -40,9 +36,9 @@
     mounted () {
       let that = this;
     },
-
-
-
+    components:{
+     "v-footer":footer
+    }
   }
 </script>
 <style rel="stylesheet/scss" lang="scss" scoped>
@@ -56,11 +52,5 @@
   }
 }
 
-.farm-desc{
-
-}
-
-
-
-
+.farm-desc{}
 </style>

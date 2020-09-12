@@ -69,7 +69,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     }),
     new HtmlWebpackPlugin({
       filename: 'farm.html',
-      template: './src/farm-web/index.html',
+      template: './src/farm-wap/index.html',
       inject: true,
       // chunks: ['manifest', 'vendor', 'index'],
       chunks:["farm"]

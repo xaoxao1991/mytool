@@ -1,9 +1,10 @@
 <template>
   <div >
-
+    <v-footer></v-footer>
   </div>
 </template>
 <script>
+  import footer from 'farmWap/pages/footer'
   export default {
     data() {
       return {
@@ -15,6 +16,12 @@
         ]
       }
     },
+    mounted () {
+      let that = this;
+    },
+    components:{
+      "v-footer":footer
+    }
   }
 </script>
 <style>

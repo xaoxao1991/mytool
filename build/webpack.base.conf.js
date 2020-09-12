@@ -12,7 +12,7 @@ module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
     index: './src/mytool-web/index.js',
-    farm: './src/farm-web/index.js',
+    farm: './src/farm-wap/index.js',
     admin: './src/admin-web/main.js',
   },
   externals: {
@@ -37,7 +37,7 @@ module.exports = {
       '@': resolve('src'),
       'adminWeb': resolve('src/admin-web'),
       'mytoolWeb': resolve('src/mytool-web'),
-      'farmWeb': resolve('src/farm-web'),
+      'farmWap': resolve('src/farm-wap'),
     }
   },
   module: {

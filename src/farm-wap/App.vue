@@ -4,18 +4,12 @@
   </div>
 </template>
 <script>
- // import software from 'userWeb/pages/software'
   export default {
     name: 'App',
     data() {
-      return {
-        left_list:[
-        ]
-      }
+      return {}
     },
-    components:{
-     // software
-    }
+    components:{}
   }
 </script>
 <style>
