@@ -7,6 +7,7 @@
                {{item.name}}
               </router-link>
             </li>
+
           </ul>
       </div>
       <div class="content">
@@ -15,13 +16,13 @@
       </div>
     </div>
 </template>
-
 <script>
   export default {
     data() {
       return {
         nav_list:[
-          {name:"农场秀",path:"farm.list"},
+          {name:"农场秀",path:"farm.share"},
+          {name:"农场列表",path:"farm.list"},
           {name:"合作联系",path:"cooperation.contact"},
           {name:"加入我们",path:"add.us"},
           {name:"登录",path:"user.login"}
@@ -42,7 +43,6 @@
     }
   }
 </script>
-
 
 <style rel="stylesheet/scss" lang="scss" scoped>
   @import '../../styles/variables.scss';
@@ -75,10 +75,13 @@
     margin: auto;
   }
   .nav-list{
-    @include flex;
+    display: table;
+    height: 100%;
     margin: auto;
     width: $widthMain;
     .nav-item{
+      display: table-cell;
+      vertical-align: middle;
       padding: .5rem 1rem .5rem 2rem;
     }
   }

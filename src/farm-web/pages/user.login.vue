@@ -1,12 +1,5 @@
 <template>
   <div >
-    <div class="content-nav">
-      <div v-for="item in nav_list">{{item.name}}</div>
-
-    </div>
-    <div >
-
-    </div>
   </div>
 </template>
 <script>
@@ -24,6 +17,5 @@
   }
 </script>
 <style>
-
 
 </style>

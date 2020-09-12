@@ -68,11 +68,11 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       chunks:["index"]
     }),
     new HtmlWebpackPlugin({
-      filename: 'jtnc.html',
-      template: './src/jtnc-web/index.html',
+      filename: 'farm.html',
+      template: './src/farm-web/index.html',
       inject: true,
       // chunks: ['manifest', 'vendor', 'index'],
-      chunks:["jtnc"]
+      chunks:["farm"]
     }),
 
     // copy custom static assets

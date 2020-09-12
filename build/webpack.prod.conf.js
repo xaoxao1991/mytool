@@ -95,10 +95,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
 
     new HtmlWebpackPlugin({
-      filename: config.build.jtnc,
-      template: './src/jtnc-web/index.html',
+      filename: config.build.farm,
+      template: './src/farm-web/index.html',
       inject: true,
-      chunks: ['manifest', 'vendor', 'jtnc'],
+      chunks: ['manifest', 'vendor', 'farm'],
       minify: {
         removeComments: true,
         collapseWhitespace: true,
