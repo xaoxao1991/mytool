@@ -14,7 +14,7 @@
         route_path:this.$route.path,
         nav_list:[
           {name:"录入",path:"/farm.enter"},
-          {name:"秀",path:"/farm.share"},
+         // {name:"秀",path:"/farm.share"},
           {name:"列表",path:"/farm.list"},
         ]
       }
@@ -49,10 +49,12 @@
       display: table;
       height: 100%;
       margin: auto;
+      width: 100%;
       .nav-item{
         display: table-cell;
         vertical-align: middle;
         padding: .5rem 1rem .5rem 2rem;
+        text-align: center;
         &.active,&.hover{
           color: #ffffff;
         }

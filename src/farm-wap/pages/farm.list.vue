@@ -1,5 +1,9 @@
 <template>
   <div >
+      <div v-for="item in farm_list">
+
+      </div>
+
     <v-footer></v-footer>
   </div>
 </template>
@@ -8,12 +12,7 @@
   export default {
     data() {
       return {
-        nav_list:[
-          {
-            name:"办公软件",
-            category:"",
-          }
-        ]
+        farm_list:[]
       }
     },
     mounted () {
