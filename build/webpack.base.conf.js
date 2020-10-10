@@ -11,7 +11,7 @@ function resolve (dir) {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    index: './src/mytool-web/index.js',
+    mytool: './src/mytool-web/index.js',
     farm: './src/farm-wap/index.js',
     admin: './src/admin-web/main.js',
   },

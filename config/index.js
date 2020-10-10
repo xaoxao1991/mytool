@@ -39,7 +39,7 @@ module.exports = {
   build: {
     // Template for index.html
     admin: path.resolve(__dirname, '../dist/admin.html'),
-    index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, '../dist/mytool.html'),
     farm: path.resolve(__dirname, '../dist/farm.html'),
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),

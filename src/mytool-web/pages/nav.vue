@@ -2,10 +2,10 @@
     <div class="container">
       <div class="left-bar">
         <div class="title">
-          <p>常用工具导航</p>
+         常用工具导航
         </div>
           <ul class="nav-list" >
-            <li v-for="item in left_list" class="nav-item" :class="{active:item.isSelected}" @click="select_nav(item)">
+            <li v-for="item in left_list" class="nav-item" :class="{active:item.path===route_path}" @click="select_nav(item)">
               <router-link  :to="item.path" >
                 <i class="iconfont" :class="item.icon"></i>{{item.name}}
               </router-link>
@@ -23,13 +23,14 @@
   export default {
     data() {
       return {
+        route_path:this.$route.path,
         left_list:[
-          {name:"常用软件",path:"software",icon:"icon-software"},
-          {name:"操作系统",path:"system",icon:"icon-system"},
-          {name:"开发编程",path:"programming",icon:"icon-code"},
-          {name:"外语学习",path:"language",icon:"icon-language"},
-          {name:"考试资料",path:"examination",icon:"icon-examination"},
-          {name:"网址导航",path:"website",icon:"icon-software"}
+          {name:"常用软件",path:"/software",icon:"icon-software"},
+          {name:"操作系统",path:"/system",icon:"icon-system"},
+          {name:"开发编程",path:"/programming",icon:"icon-code"},
+          {name:"外语学习",path:"/language",icon:"icon-language"},
+          {name:"考试资料",path:"/examination",icon:"icon-examination"},
+          {name:"网址导航",path:"/website",icon:"icon-software"}
         ]
       }
     },
@@ -48,9 +49,13 @@
     }
   }
 </script>
-<style>
+<style rel="stylesheet/scss" lang="scss" scoped>
   .title{
-    text-align: center;
+    padding: .5rem 1rem .5rem 2rem;
+    font-size: .7rem;
+    &:hover{
+      color:#ffffff;
+    }
   }
   .container{
     padding: 0 0 0 12rem;

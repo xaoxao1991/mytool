@@ -79,10 +79,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
 
     new HtmlWebpackPlugin({
-      filename: config.build.index,
+      filename: config.build.mytool,
       template: './src/mytool-web/index.html',
       inject: true,
-      chunks: ['manifest', 'vendor', 'index'],
+      chunks: ['manifest', 'vendor', 'mytool'],
       minify: {
         removeComments: true,
         collapseWhitespace: true,

@@ -1,5 +1,9 @@
 <template>
   <div class="box">
+    <div>
+      <div>常用网址</div>
+    </div>
+
   </div>
 </template>
 
@@ -7,11 +11,12 @@
   export default {
     data() {
       return {
-        left_list:[]
+        left_list:[
+
+        ]
       }
     },
   }
 </script>
-
 <style>
 </style>

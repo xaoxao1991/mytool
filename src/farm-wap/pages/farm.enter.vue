@@ -96,7 +96,6 @@
     methods:{
       image_Success(result, file) {
         let that = this;
-
       },
 
       beforeAvatarUpload(file) {

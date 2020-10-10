@@ -25,7 +25,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [
-        { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
+        { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'farm.html') },
       ],
     },
     hot: true,
@@ -61,11 +61,11 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     }),
 
     new HtmlWebpackPlugin({
-      filename: 'index.html',
+      filename: 'mytool.html',
       template: './src/mytool-web/index.html',
       inject: true,
      // chunks: ['manifest', 'vendor', 'index'],
-      chunks:["index"]
+      chunks:["mytool"]
     }),
     new HtmlWebpackPlugin({
       filename: 'farm.html',
