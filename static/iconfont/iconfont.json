@@ -1,0 +1,86 @@
+{
+  "id": "2005097",
+  "name": "mytool",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "mytool",
+  "glyphs": [
+    {
+      "icon_id": "10678410",
+      "name": "entertainment mark",
+      "font_class": "-entertainment",
+      "unicode": "e6dc",
+      "unicode_decimal": 59100
+    },
+    {
+      "icon_id": "13709889",
+      "name": "Music Entertainment",
+      "font_class": "MusicEntertainment",
+      "unicode": "e68f",
+      "unicode_decimal": 59023
+    },
+    {
+      "icon_id": "3376249",
+      "name": "推荐",
+      "font_class": "-recommend",
+      "unicode": "e679",
+      "unicode_decimal": 59001
+    },
+    {
+      "icon_id": "1061332",
+      "name": "set",
+      "font_class": "-set",
+      "unicode": "e689",
+      "unicode_decimal": 59017
+    },
+    {
+      "icon_id": "5119325",
+      "name": "category",
+      "font_class": "-category",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "721659",
+      "name": "代码",
+      "font_class": "-code",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "2199735",
+      "name": "操作系统",
+      "font_class": "-system",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "5524657",
+      "name": "language",
+      "font_class": "-language",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "7964499",
+      "name": "考试",
+      "font_class": "-examination",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "8299125",
+      "name": "software",
+      "font_class": "-software",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "12752733",
+      "name": "网址",
+      "font_class": "-website",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    }
+  ]
+}

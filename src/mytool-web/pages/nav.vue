@@ -5,7 +5,7 @@
          常用工具导航
         </div>
           <ul class="nav-list" >
-            <li v-for="item in left_list" class="nav-item" :class="{active:item.path===route_path}" @click="select_nav(item)">
+            <li v-for="item in left_list" class="nav-item" :class="{active:item.path===$route.path}" @click="select_nav(item)">
               <router-link  :to="item.path" >
                 <i class="iconfont" :class="item.icon"></i>{{item.name}}
               </router-link>
@@ -30,21 +30,26 @@
           {name:"开发编程",path:"/programming",icon:"icon-code"},
           {name:"外语学习",path:"/language",icon:"icon-language"},
           {name:"考试资料",path:"/examination",icon:"icon-examination"},
-          {name:"网址导航",path:"/website",icon:"icon-software"}
+          {name:"网址导航",path:"/website",icon:"icon-software"},
+          {name:"娱乐休闲",path:"/entertainment",icon:"icon-entertainment"}
         ]
       }
     },
 
     methods:{
       select_nav:function (item) {
+
         let that=this
-        that.left_list.forEach((nav,index)=>{
-          if(nav.path===item.path){
-            nav.isSelected=true
-          }else{
-            nav.isSelected=false
-          }
-        })
+
+        that.route_path=this.$route.path
+
+        // that.left_list.forEach((nav,index)=>{
+        //   if(nav.path===item.path){
+        //     nav.isSelected=true
+        //   }else{
+        //     nav.isSelected=false
+        //   }
+        // })
       }
     }
   }
@@ -62,34 +67,43 @@
     height: 100%;
     width: 100%;
     position: relative;
+    .left-bar{
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 12rem;
+      background: #30333c;
+      color: #6b7386;
+      transition: all .5s;
+    }
+    .content{
+      width: 100%;
+      height: 100%;
+      background: #f3f6f8;
+      position: relative;
+    }
   }
-  .left-bar{
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 12rem;
-    background: #30333c;
-    color: #6b7386;
-    transition: all .5s;
-  }
-  .content{
-    width: 100%;
-    height: 100%;
-    background: #f3f6f8;
-    padding: .5em 1rem;
-    position: relative;
-  }
-  .nav-list{
 
+  .nav-list{
+    .nav-item{
+      padding: .5rem 1rem .5rem 2rem;
+
+      &:hover{
+        color: #aaaaaa;
+      }
+      &.active{
+        color: #ffffff;
+      }
+
+      .iconfont{
+        display: inline-block;
+        font-size: 1rem;
+        padding: 0 .5rem 0 0;
+      }
+    }
   }
-  .nav-item{
-    padding: .5rem 1rem .5rem 2rem;
-  }
-  .nav-item.active,
-  .nav-item:hover{
-    color: #ffffff;
-  }
+
 .bei-an{
   position: absolute;
   left: 0;
@@ -100,9 +114,5 @@
   font-size: .6rem;
   color: #999999;
 }
-  .iconfont{
-    display: inline-block;
-    font-size: 1rem;
-    padding: 0 .5rem 0 0;
-  }
+
 </style>

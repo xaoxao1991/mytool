@@ -18,9 +18,12 @@ export const constantRouterMap = [
   {
     path: '/farm.list',
     component:  () => import('farmWap/pages/farm.list')
+  },
+
+  {
+    path: '/*',
+    redirect: '/',
   }
-
-
 
 ]
 

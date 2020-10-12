@@ -9,8 +9,7 @@
     name: 'App',
     data() {
       return {
-        left_list:[
-        ]
+        left_list:[]
       }
     },
     components:{
