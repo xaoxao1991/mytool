@@ -11,18 +11,20 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "crypto-js": "^4.0.0",
     "echarts": "^4.2.0-rc.2",
     "element-ui": "^2.3.7",
+    "jr-qrcode": "^1.1.4",
     "js-cookie": "^2.2.0",
+    "marked": "^1.1.1",
+    "mavon-editor": "^2.9.0",
     "normalize.css": "^8.0.0",
     "nprogress": "^0.2.0",
     "v-charts": "^1.19.0",
     "v-distpicker": "^1.0.20",
-    "crypto-js": "^4.0.0",
-    "jr-qrcode": "^1.1.4",
-    "marked": "^1.1.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
+    "vue-wechat-title": "^2.0.7",
     "vuex": "^3.0.1"
   },
   "devDependencies": {

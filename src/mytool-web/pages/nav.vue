@@ -1,21 +1,16 @@
 <template>
     <div class="container">
-      <div class="left-bar">
-        <div class="title">
-         常用工具导航
-        </div>
-          <ul class="nav-list" >
-            <li v-for="item in left_list" class="nav-item" :class="{active:item.path===$route.path}" @click="select_nav(item)">
-              <router-link  :to="item.path" >
+        <ul class="nav-list" >
+          <li v-for="item in left_list" class="nav-item" :class="{active:item.path===$route.path}" @click="select_nav(item)">
+            <router-link  :to="item.path" >
+              <div class="title">
                 <i class="iconfont" :class="item.icon"></i>{{item.name}}
-              </router-link>
-            </li>
-          </ul>
-      </div>
-      <div class="content">
-        <router-view/>
-        <div class="bei-an">备案号:赣ICP备15011116号-5</div>
-      </div>
+              </div>
+              <div class="desc"></div>
+            </router-link>
+          </li>
+      </ul>
+      <div class="bei-an">备案号:赣ICP备15011116号-5</div>
     </div>
 </template>
 
@@ -55,28 +50,13 @@
   }
 </script>
 <style rel="stylesheet/scss" lang="scss" scoped>
-  .title{
-    padding: .5rem 1rem .5rem 2rem;
-    font-size: .7rem;
-    &:hover{
-      color:#ffffff;
-    }
-  }
+  @import '../../styles/variables.scss';
   .container{
-    padding: 0 0 0 12rem;
+    padding: 0 0 0 0;
     height: 100%;
     width: 100%;
+    min-width: $widthMain;
     position: relative;
-    .left-bar{
-      position: fixed;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 12rem;
-      background: #30333c;
-      color: #6b7386;
-      transition: all .5s;
-    }
     .content{
       width: 100%;
       height: 100%;
@@ -86,9 +66,24 @@
   }
 
   .nav-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     .nav-item{
       padding: .5rem 1rem .5rem 2rem;
+      width: 14rem;
+      background-color: #F3F5F6;
+      border-radius: .2rem;
+      flex-shrink: 0;
+      flex-grow: 0;
+      margin: 1.5rem 0 0 0;
+      .title{
 
+      }
+      .desc{
+        height: 6rem;
+      }
       &:hover{
         color: #aaaaaa;
       }
@@ -105,7 +100,7 @@
   }
 
 .bei-an{
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
@@ -113,6 +108,7 @@
   text-align: center;
   font-size: .6rem;
   color: #999999;
+  background-color: #3A3A3A;
 }
 
 </style>

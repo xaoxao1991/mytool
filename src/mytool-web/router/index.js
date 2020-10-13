@@ -7,54 +7,33 @@ export const constantRouterMap = [
   {
     path: '/',
     component:  () => import('mytoolWeb/pages/nav'),
-    redirect: '/software',
+    meta: {title: '导航页', icon: 'entertainment'}
+  },
+
+  {
+    path: '/markdown',
+    component:  () => import('mytoolWeb/pages/mark.down'),
+    meta: {title: '文本转换器', icon: 'entertainment'}
+  },
+
+
+  {
+    path: '/novel',
+    component:  () => import('mytoolWeb/pages/novel'),
     children: [
       {
-        path: 'software',
-        name: 'software',
-        component: () => import('mytoolWeb/pages/software'),
-        meta: {title: '常用软件', icon: 'software'}
+        path: '/',
+        redirect: 'rich.dad.or.pool.dad',
       },
       {
-      path: 'system',
-      name: 'system',
-      component: () => import('mytoolWeb/pages/system'),
-      meta: {title: '操作系统', icon: 'system'}
-    },
-      {
-        path: 'programming',
-        name: 'programming',
-        component: () => import('mytoolWeb/pages/programming'),
-        meta: {title: '开发编程', icon: 'programming'}
-      },
-      {
-        path: 'language',
-        name: 'language',
-        component: () => import('mytoolWeb/pages/language'),
-        meta: {title: '外语学习', icon: 'language'}
-      },
-      {
-        path: 'examination',
-        name: 'examination',
-        component: () => import('mytoolWeb/pages/examination'),
-        meta: {title: '考试', icon: 'examination'}
-      },
-      {
-        path: 'website',
-        name: 'website',
-        component: () => import('mytoolWeb/pages/website'),
-        meta: {title: '网址导航', icon: 'website'}
-      },
-      {
-        path: 'entertainment',
-        name: 'entertainment',
-        component: () => import('mytoolWeb/pages/entertainment'),
-        meta: {title: '娱乐休闲', icon: 'entertainment'}
+        path: 'rich.dad.or.pool.dad',
+        name: 'rich.dad.or.pool.dad',
+        component: () => import('mytoolWeb/pages/novel/rich.dad.or.pool.dad'),
+        meta: {title: 'rich.dad.or.pool.da', icon: 'entertainment'}
       }
     ],
-
-
   },
+
   {
     path: '/*',
     redirect: '/',

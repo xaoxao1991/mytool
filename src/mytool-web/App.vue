@@ -1,22 +1,17 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view v-wechat-title='$route.meta.title'/>
   </div>
 </template>
 <script>
- // import software from 'userWeb/pages/software'
+import VueWechatTitle from 'vue-wechat-title'
+Vue.use(VueWechatTitle)
   export default {
     name: 'App',
     data() {
-      return {
-        left_list:[]
-      }
+      return {}
     },
-    components:{
-     // software
-    }
+    components:{}
   }
 </script>
-<style>
-
-</style>
+<style></style>
