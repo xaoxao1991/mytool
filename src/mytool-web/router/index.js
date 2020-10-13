@@ -11,6 +11,15 @@ export const constantRouterMap = [
   },
 
   {
+    path: '/language',
+    component:  () => import('mytoolWeb/pages/language/language'),
+    meta: {title: 'learn language', icon: 'entertainment'}
+  },
+
+
+
+
+  {
     path: '/markdown',
     component:  () => import('mytoolWeb/pages/mark.down'),
     meta: {title: '文本转换器', icon: 'entertainment'}

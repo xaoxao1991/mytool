@@ -26,7 +26,9 @@
           {name:"外语学习",path:"/language",icon:"icon-language"},
           {name:"考试资料",path:"/examination",icon:"icon-examination"},
           {name:"网址导航",path:"/website",icon:"icon-software"},
-          {name:"娱乐休闲",path:"/entertainment",icon:"icon-entertainment"}
+          {name:"娱乐休闲",path:"/entertainment",icon:"icon-entertainment"},
+
+          {name:"富文本",path:"/markdown",icon:"icon-entertainment"}
         ]
       }
     },
