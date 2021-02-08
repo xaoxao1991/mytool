@@ -16,7 +16,7 @@
     "element-ui": "^2.3.7",
     "jr-qrcode": "^1.1.4",
     "js-cookie": "^2.2.0",
-    "marked": "^1.1.1",
+    "marked": "^2.0.0",
     "mavon-editor": "^2.9.0",
     "normalize.css": "^8.0.0",
     "nprogress": "^0.2.0",
